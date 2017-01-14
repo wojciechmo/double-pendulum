@@ -26,12 +26,13 @@ void MainWindow::main_function()
     ddfi[1] =(gravity*m[0]*sin(fi[1])+gravity*m[1]*sin(fi[1])+(dfi[0]*dfi[0])*l[0]*m[0]*sin(fi[0]-fi[1])+(dfi[0]*dfi[0])*l[0]*m[1]*sin(fi[0]-fi[1])-gravity*m[0]*sin(fi[0])*cos(fi[0]-fi[1])-gravity*m[1]*sin(fi[0])*cos(fi[0]-fi[1])+(dfi[1]*dfi[1])*l[1]*m[1]*cos(fi[0]-fi[1])*sin(fi[0]-fi[1]))/(l[1]*(m[0]+m[1]-m[1]*pow(cos(fi[0]-fi[1]),2.0)));
 
     //integration - simplest rectangle method
-    dfi[0]=dfi[0]+ddfi[0]*dt;
-    fi[0]=fi[0]+dfi[0]*dt;
-    dfi[1]=dfi[1]+ddfi[1]*dt;
-    fi[1]=fi[1]+dfi[1]*dt;
-    ddfi_prev[0]=ddfi[0];ddfi_prev[1]=ddfi[1];
-    dfi_prev[0]=dfi[0];dfi_prev[1]=dfi[1];
+    for(int i=0;i<2;i++)
+    {
+        dfi[i]=dfi[i]+ddfi[i]*dt;
+        fi[i]=fi[i]+dfi[i]*dt;
+        ddfi_prev[i]=ddfi[i];
+        dfi_prev[i]=dfi[i];
+    }
 
     //update joints position for drawing
     cart_joint_pos_x[0]=l[0]*scale*sin(fi[0])+centre_x;
