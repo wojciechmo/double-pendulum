@@ -11,7 +11,7 @@ Quadruple pendulum:https://www.youtube.com/watch?v=cp731cKgoHw
 
 Quintuple pendulum:https://www.youtube.com/watch?v=hjIax13cDGY
 
-<img src="https://s30.postimg.org/6o50auf8h/pend_Kopia.jpg" width="800">
+<img src="https://s23.postimg.org/41stwh8fv/pend4.jpg" width="800">
 
 
 
