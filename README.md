@@ -7,7 +7,7 @@ Watch video on youtube:
 
 Quadruple pendulum:https://www.youtube.com/watch?v=cp731cKgoHw
 
-<img src="https://s23.postimg.org/41stwh8fv/pend4.jpg" width="800">
+<img src="https://github.com/WojciechMormul/double-pendulum/blob/master/imgs/pend4.bmp" width="800">
 
 
 
